@@ -1,0 +1,134 @@
+TEST TASK (LARAVEL)
+We need to create the parser that will be grabbing information from IMDB (pages like https://www.imdb.com/title/tt1051906/?ref_=hm_fanfav_tt_2_pd_fp1) and saving it into our database.
+
+The information we should get:
+1. Title
+2. Cover image
+3. Release date
+4. Rating
+5. "Genres"
+6. "Director"
+
+So, the output should be:
+1. Kernel command to grab the info from IMDB by using ID, for example "parse:imdb --id=tt1051906".
+2. Info should be saved directly into the database.
+3. Cover image should be stored in the Laravel Storage.
+
+{
+  "@context": "http://schema.org",
+  "@type": "Movie",
+  "url": "/title/tt1051906/",
+  "name": "The Invisible Man",
+  "image": "https://m.media-amazon.com/images/M/MV5BZjFhM2I4ZDYtZWMwNC00NTYzLWE3MDgtNjgxYmM3ZWMxYmVmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+  "genre": [
+    "Horror",
+    "Mystery",
+    "Sci-Fi",
+    "Thriller"
+  ],
+  "contentRating": "R",
+  "actor": [
+    {
+      "@type": "Person",
+      "url": "/name/nm0005253/",
+      "name": "Elisabeth Moss"
+    },
+    {
+      "@type": "Person",
+      "url": "/name/nm2719825/",
+      "name": "Oliver Jackson-Cohen"
+    },
+    {
+      "@type": "Person",
+      "url": "/name/nm2976830/",
+      "name": "Harriet Dyer"
+    },
+    {
+      "@type": "Person",
+      "url": "/name/nm0388038/",
+      "name": "Aldis Hodge"
+    }
+  ],
+  "director": {
+    "@type": "Person",
+    "url": "/name/nm1191481/",
+    "name": "Leigh Whannell"
+  },
+  "creator": [
+    {
+      "@type": "Person",
+      "url": "/name/nm1191481/",
+      "name": "Leigh Whannell"
+    },
+    {
+      "@type": "Person",
+      "url": "/name/nm1191481/",
+      "name": "Leigh Whannell"
+    },
+    {
+      "@type": "Person",
+      "url": "/name/nm0920229/",
+      "name": "H.G. Wells"
+    },
+    {
+      "@type": "Organization",
+      "url": "/company/co0005073/"
+    },
+    {
+      "@type": "Organization",
+      "url": "/company/co0098315/"
+    },
+    {
+      "@type": "Organization",
+      "url": "/company/co0237697/"
+    },
+    {
+      "@type": "Organization",
+      "url": "/company/co0791453/"
+    }
+  ],
+  "description": "The Invisible Man is a movie starring Elisabeth Moss, Oliver Jackson-Cohen, and Harriet Dyer. When Cecilia\u0027s abusive ex takes his own life and leaves her his fortune, she suspects his death was a hoax. As a series of coincidences...",
+  "datePublished": "2020-02-26",
+  "keywords": "domestic abuse,psychological abuse,mad scientist,reboot,based on novel",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingCount": 61406,
+    "bestRating": "10.0",
+    "worstRating": "1.0",
+    "ratingValue": "7.3"
+  },
+  "review": {
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "CreativeWork",
+      "url": "/title/tt1051906/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "mercurio-14347"
+    },
+    "dateCreated": "2020-03-01",
+    "inLanguage": "English",
+    "name": "How to get scared about something you can\u0027t see",
+    "reviewBody": "After a failed attempt by Universal to create a shared Universe of Monsters that began with the Mummy in 2017. This second attempt comes to return the stories of iconic horror characters, and it is an unexpected success.\n\nThis is the second film by director Leigh Whannell, which began with the underrated jewel of Upgrade, which in my opinion is very good, but not well known on this side of the world. Still, Universal seems to have seen potential, and thus man turns the franchise into his own.\n\nThe commercial horror movie industry is often very generic, they are simple plots with cheap and not well crafted jump scares. So how to scare you with a movie about something that can\u0027t scream in your face? The answer is simple; A good script, a good direction, and the performance of Elizabeth Moss.\n\nThe script creates situations, which although they may seem few, are very well built to achieve the necessary impact on the audience, and they grow as the story progresses, to reach a strong outcome, as well as one of the best Directed scenes of the movie. and that shows that the director can offer much more. This, with the credible performance of the main actress; his expressions, his way of moving and the appearance she brings. Give a tone of anxiety and anguish to the film, which make you feel that the threat is real and at the same time, to imagine that in that empty space there is someone watching you.\n\nThe proposal of the story is different from all the previous adaptations of the character, and it is very interesting to see in this new installment. It becomes original for the entire duration of the movie, and shows us a very frequent theme in our society, about power-hungry controlling men, and adds an invisible one.\n\nPhotography, also very well done, has movements that cover a whole space and that repeatedly put your imagination at stake, by making your mind work and make you think about where this enemy can be, in several scenes, it can show you where It is without the need to see it. and it gets creepy.\n\nFinally, the soundtrack is composed from Benjamin Wallfisch (IT) that increases the emotions of each scene with electronic and loud sounds, which combine very well with the tone of the film.\n\nIn Conclusion it is an interesting new proposal by the director, as of Universal. By betting on a more independent approach and not as commercial as it was driving. That thanks to its script and execution, result in a good horror movie, with an original message, inspired by real situations.\n\nP.S. the new way that this character becomes invisible it\u0027s something to see 7o7.",
+    "reviewRating": {
+      "@type": "Rating",
+      "worstRating": "1",
+      "bestRating": "10",
+      "ratingValue": "8"
+    }
+  },
+  "duration": "PT2H4M",
+  "trailer": {
+    "@type": "VideoObject",
+    "name": "Official Trailer",
+    "embedUrl": "/video/imdb/vi2623455001",
+    "thumbnail": {
+      "@type": "ImageObject",
+      "contentUrl": "https://m.media-amazon.com/images/M/MV5BYjU2NmQ3YjEtYmI1OC00OWVkLWEwZGQtYjYzMTAxMWI4YTBlXkEyXkFqcGdeQWpnYW1i._V1_.jpg"
+    },
+    "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BYjU2NmQ3YjEtYmI1OC00OWVkLWEwZGQtYjYzMTAxMWI4YTBlXkEyXkFqcGdeQWpnYW1i._V1_.jpg",
+    "description": "What you can’t see can hurt you. Emmy winner Elisabeth Moss (Us, Hulu’s The Handmaid’s Tale) stars in a terrifying modern tale of obsession inspired by Universal’s classic monster character.",
+    "uploadDate": "2020-02-07T17:16:02Z"
+  }
+}

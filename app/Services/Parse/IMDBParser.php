@@ -81,6 +81,8 @@ class IMDBParser extends AbstractParser
     public function setSource(string $source): void
     {
         $this->parser->setHtml($source);
-        $this->sourceIsSet = true;
+
+        // Need this flag because source could be really big
+        $this->sourceIsSet = !empty($source);
     }
 }
